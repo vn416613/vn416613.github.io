@@ -1,6 +1,6 @@
 # AI Agent Resume Site
 
-这是一个用于个人简历展示的 Hugo 静态站点，内容围绕 Pico 本地 AI Coding Agent 项目组织。
+这是一个用于个人简历展示的 Hugo 静态站点。
 
 ## 本地运行
 
