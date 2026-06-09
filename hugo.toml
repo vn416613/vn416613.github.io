@@ -1,7 +1,7 @@
 baseURL = "https://vn416613.github.io/"
 locale = "en-us"
 defaultContentLanguage = "en"
-title = "vn416613"
+title = "xyy"
 theme = "hugo-PaperMod"
 enableRobotsTXT = true
 enableEmoji = true
@@ -18,9 +18,9 @@ buildExpired = false
 
 [params]
   env = "production"
-  title = "vn416613"
+  title = "xyy"
   description = "Graduate portfolio for AI agent and backend engineering internship applications"
-  author = "Your Name"
+  author = "xyy"
   defaultTheme = "light"
   disableThemeToggle = false
   ShowReadingTime = false
@@ -36,7 +36,7 @@ buildExpired = false
     disableHLJS = true
 
   [params.label]
-    text = "vn416613"
+    text = "xyy"
 
   [[params.socialIcons]]
     name = "github"
@@ -44,7 +44,7 @@ buildExpired = false
 
   [[params.socialIcons]]
     name = "email"
-    url = "mailto:2625909625@qq.com"
+    url = "mailto:18326101120@163.com"
 
 [menu]
   [[menu.main]]

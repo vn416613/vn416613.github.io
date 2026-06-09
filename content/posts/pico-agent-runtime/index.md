@@ -1,5 +1,5 @@
 ---
-title: "RepoPilot Agent Runtime Reading Notes"
+title: "Kodama Runtime Reading Notes"
 date: 2026-06-09
 summary: "A concise walkthrough of a lightweight coding-agent runtime from CLI entrypoint to the ask loop."
 tags: ["Python", "LLM Agent", "Runtime"]

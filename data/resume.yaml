@@ -1,11 +1,11 @@
 profile:
-  name: "Your Name"
-  alias: "vn416613"
+  name: "xyy"
+  alias: "xyy"
   title: "Graduate Student"
   subtitle: "AI Agent / Backend Engineering Intern"
-  school: "Your University"
+  school: "Anhui University"
   major: "Computer Science / Software Engineering / Artificial Intelligence"
-  email: "2625909625@qq.com"
+  email: "18326101120@163.com"
   github: "https://github.com/vn416613"
   githubLabel: "github.com/vn416613"
   location: "China"
@@ -36,13 +36,13 @@ interests:
 
 education:
   - degree: "Master's Student"
-    institution: "Your University"
+    institution: "Anhui University"
     major: "Computer Science / Software Engineering / Artificial Intelligence"
     period: "2025.09 - 2028.06"
     description: "Coursework and self-directed projects focus on AI applications, software engineering automation, Python systems, LLM tool use, prompt context management, pytest-based testing, and GitHub Pages portfolio delivery."
 
 projects:
-  - name: "RepoPilot Agent Runtime"
+  - name: "Kodama"
     period: "2026.04 - 2026.06"
     role: "Source Code Analysis / Agent Runtime Project"
     description: "A lightweight local coding-agent runtime built in Python. It supports repository inspection, file reading, code search, shell execution, patch-based editing, session persistence, and multi-provider model access through a controlled tool protocol."
