@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Cartoon student avatar">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="64" x2="424" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DFF7F3"/>
+      <stop offset="0.52" stop-color="#BEEBE6"/>
+      <stop offset="1" stop-color="#E8F0FF"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="154" y1="330" x2="360" y2="486" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F7F8F"/>
+      <stop offset="1" stop-color="#245B8F"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0C3140" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="256" fill="url(#bg)"/>
+  <circle cx="392" cy="122" r="42" fill="#FFFFFF" opacity=".55"/>
+  <circle cx="119" cy="392" r="54" fill="#FFFFFF" opacity=".42"/>
+  <g filter="url(#shadow)">
+    <path d="M130 466c12-89 61-136 126-136s114 47 126 136H130z" fill="url(#shirt)"/>
+    <path d="M205 342l51 72 51-72c-30 21-72 21-102 0z" fill="#F7FAFC"/>
+    <path d="M226 348h60l-30 43-30-43z" fill="#E7F5F3"/>
+    <path d="M177 219c-20-63 17-129 82-135 73-7 122 47 115 119-2 24-9 46-20 66-22 41-57 63-98 63-39 0-70-18-91-53-9-15-15-35-18-60z" fill="#F6C8A9"/>
+    <path d="M169 222c-4-34 1-70 20-97 22-31 60-51 105-48 49 4 83 31 97 72 8 23 7 51 1 75-26-10-48-28-63-52-39 35-94 53-160 50z" fill="#263849"/>
+    <path d="M164 217c-15 1-27 15-24 33 3 19 17 31 33 29l-9-62z" fill="#F0B794"/>
+    <path d="M380 217c15 1 27 15 24 33-3 19-17 31-33 29l9-62z" fill="#F0B794"/>
+    <circle cx="226" cy="238" r="8" fill="#263849"/>
+    <circle cx="303" cy="238" r="8" fill="#263849"/>
+    <path d="M247 276c16 11 33 11 50 0" fill="none" stroke="#A55D52" stroke-width="8" stroke-linecap="round"/>
+    <path d="M211 210c18-10 36-10 52-1" fill="none" stroke="#263849" stroke-width="10" stroke-linecap="round"/>
+    <path d="M281 209c17-9 35-8 52 2" fill="none" stroke="#263849" stroke-width="10" stroke-linecap="round"/>
+    <path d="M169 181c16-64 66-105 128-98 59 7 95 49 98 106-58-3-103-24-132-62-21 31-53 49-94 54z" fill="#31485C"/>
+    <path d="M230 112c30-15 76-12 105 14" fill="none" stroke="#557084" stroke-width="12" stroke-linecap="round" opacity=".55"/>
+    <rect x="169" y="384" width="173" height="72" rx="18" fill="#FFFFFF" opacity=".12"/>
+  </g>
+</svg>

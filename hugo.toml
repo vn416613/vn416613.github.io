@@ -1,6 +1,6 @@
 baseURL = "https://vn416613.github.io/"
-locale = "zh-cn"
-defaultContentLanguage = "zh"
+locale = "en-us"
+defaultContentLanguage = "en"
 title = "vn416613"
 theme = "hugo-PaperMod"
 enableRobotsTXT = true
@@ -19,8 +19,8 @@ buildExpired = false
 [params]
   env = "production"
   title = "vn416613"
-  description = "研一学生的 AI Agent / 后端开发实习简历博客"
-  author = "你的姓名"
+  description = "Graduate portfolio for AI agent and backend engineering internship applications"
+  author = "Your Name"
   defaultTheme = "light"
   disableThemeToggle = false
   ShowReadingTime = false

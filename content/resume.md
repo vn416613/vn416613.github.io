@@ -1,8 +1,8 @@
 ---
 title: "Resume"
-description: "简历下载说明"
+description: "Resume download information"
 ---
 
-目前可在首页查看在线简历内容。
+The online resume is available on the homepage.
 
-后续可以把 PDF 或 Word 简历放到 `static/files/` 目录，并在这里提供下载链接。
+You can later place a PDF or Word resume under `static/files/` and link it from this page.

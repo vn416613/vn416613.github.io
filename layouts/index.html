@@ -1,85 +1,87 @@
 {{ define "main" }}
 {{ $r := hugo.Data.resume }}
 <section class="portfolio-shell">
-  <aside class="portfolio-sidebar">
-    <div class="profile-avatar" aria-hidden="true">{{ $r.profile.avatarText }}</div>
-    <h1>{{ $r.profile.alias }}</h1>
-    <p class="profile-name">{{ $r.profile.name }}</p>
-    <p class="profile-title">{{ $r.profile.title }}</p>
-    <p class="profile-school">{{ $r.profile.school }}</p>
+  <aside class="portfolio-sidebar" aria-label="Profile summary">
+    <div class="profile-card">
+      <img class="profile-avatar" src="{{ $r.profile.avatar }}" alt="{{ $r.profile.name }} avatar" width="128" height="128">
+      <p class="profile-kicker">{{ $r.profile.title }}</p>
+      <h1>{{ $r.profile.alias }}</h1>
+      <p class="profile-name">{{ $r.profile.name }}</p>
+      <p class="profile-title">{{ $r.profile.subtitle }}</p>
+      <p class="profile-welcome">{{ $r.profile.welcome }}</p>
 
-    <p class="profile-welcome">{{ $r.profile.welcome }}</p>
+      <div class="contact-row" aria-label="Contact links">
+        <a href="mailto:{{ $r.profile.email }}" title="Email">Email</a>
+        <a href="{{ $r.profile.github }}" target="_blank" rel="noreferrer" title="GitHub">GitHub</a>
+      </div>
 
-    <div class="contact-row" aria-label="contact">
-      <a href="mailto:{{ $r.profile.email }}" title="Email">Mail</a>
-      <a href="{{ $r.profile.github }}" target="_blank" rel="noreferrer" title="GitHub">GitHub</a>
-    </div>
-
-    <div class="sidebar-stats">
-      {{ range $r.stats }}
-        <div>
-          <strong>{{ .value }}</strong>
-          <span>{{ .label }}</span>
-        </div>
-      {{ end }}
-    </div>
-
-    <div class="sidebar-list">
-      <h2>Recent Updates</h2>
-      {{ range $r.recentUpdates }}
-        <a href="/projects/">{{ . }}</a>
-      {{ end }}
-    </div>
-
-    <div class="sidebar-tags">
-      <h2>Hot Tags</h2>
-      <div>
-        {{ range $r.hotTags }}<span>{{ . }}</span>{{ end }}
+      <div class="focus-tags">
+        {{ range $r.focusTags }}<span>{{ . }}</span>{{ end }}
       </div>
     </div>
   </aside>
 
   <div class="portfolio-main">
-    <section class="about-grid">
-      <div class="about-copy">
-        <h2>About Me</h2>
-        <p>{{ $r.profile.bio }}</p>
-        <a class="download-btn" href="{{ $r.profile.resumeUrl }}">下载简历</a>
+    <section class="hero-panel">
+      <p class="eyebrow">Personal Resume</p>
+      <h2>{{ $r.profile.subtitle }}</h2>
+      <p>{{ $r.profile.bio }}</p>
+      <div class="hero-actions">
+        <a class="primary-action" href="{{ $r.profile.resumeUrl }}">Resume Page</a>
+        <a href="/projects/">View Projects</a>
       </div>
+    </section>
 
-      <div class="interest-block">
-        <h2>Interests</h2>
-        <ul>
-          {{ range $r.interests }}<li>{{ . }}</li>{{ end }}
-        </ul>
-      </div>
-
-      <div class="education-block">
-        <h2>Education</h2>
+    <section class="resume-grid">
+      <article class="info-panel">
+        <div class="section-title-row">
+          <h2>Education</h2>
+          <span>Graduate Study</span>
+        </div>
         {{ range $r.education }}
-          <article>
+          <div class="education-item">
+            <span>{{ .period }}</span>
             <h3>{{ .degree }}</h3>
             <p>{{ .institution }}</p>
             <p>{{ .major }}</p>
-            <small>{{ .period }}</small>
-          </article>
+          </div>
         {{ end }}
-      </div>
+      </article>
+
+      <article class="info-panel">
+        <div class="section-title-row">
+          <h2>Interests</h2>
+          <span>Direction</span>
+        </div>
+        <ul class="clean-list">
+          {{ range $r.interests }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </article>
     </section>
 
     <section class="home-section">
       <div class="section-title-row">
-        <h2>Projects</h2>
-        <a href="/projects/">View All -></a>
+        <h2>Featured Projects</h2>
+        <a href="/projects/">View All</a>
       </div>
       <div class="project-grid">
-        {{ range first 4 $r.projects }}
+        {{ range first 2 $r.projects }}
           <article class="project-card">
-            <a class="card-link" href="{{ .url }}" target="_blank" rel="noreferrer">↗</a>
+            <div class="project-card-head">
+              <span>{{ .period }}</span>
+              <a class="card-link" href="{{ .url }}" target="_blank" rel="noreferrer" aria-label="{{ .name }}">Open</a>
+            </div>
             <h3>{{ .name }}</h3>
+            <p class="project-role">{{ .role }}</p>
             <p>{{ .description }}</p>
             <div class="tag-row">
               {{ range .tags }}<span>{{ . }}</span>{{ end }}
+            </div>
+            <ul class="project-bullets">
+              {{ range first 3 .bullets }}<li>{{ . }}</li>{{ end }}
+            </ul>
+            <div class="outcome-row">
+              {{ range .outcomes }}<span>{{ . }}</span>{{ end }}
             </div>
           </article>
         {{ end }}
@@ -89,7 +91,7 @@
     <section class="home-section">
       <div class="section-title-row">
         <h2>Professional Skills</h2>
-        <a href="/skills/">View All -></a>
+        <a href="/skills/">View All</a>
       </div>
       <div class="skill-preview-grid">
         {{ range $r.skills }}

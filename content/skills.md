@@ -1,5 +1,5 @@
 ---
 title: "Skills"
 layout: "skills"
-description: "专业技能展示"
+description: "Technical skills for AI agent and backend engineering"
 ---

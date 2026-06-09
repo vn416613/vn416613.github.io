@@ -3,7 +3,7 @@
 <article class="post-single portfolio-page">
   <header class="page-header">
     <h1>Projects</h1>
-    <p>围绕 AI Agent、Python 工程和个人展示站的项目经历。</p>
+    <p>Selected projects focused on AI agents, Python systems, and portfolio delivery.</p>
   </header>
   <div class="project-list">
     {{ range $r.projects }}
@@ -22,6 +22,9 @@
         <ul>
           {{ range .bullets }}<li>{{ . }}</li>{{ end }}
         </ul>
+        <div class="outcome-row">
+          {{ range .outcomes }}<span>{{ . }}</span>{{ end }}
+        </div>
       </section>
     {{ end }}
   </div>

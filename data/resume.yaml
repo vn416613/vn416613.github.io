@@ -1,95 +1,87 @@
 profile:
-  name: "你的姓名"
+  name: "Your Name"
   alias: "vn416613"
-  title: "研一学生"
-  subtitle: "AI Agent / 后端开发实习"
-  school: "XXX大学"
-  major: "计算机科学与技术 / 软件工程 / 人工智能"
+  title: "Graduate Student"
+  subtitle: "AI Agent / Backend Engineering Intern"
+  school: "Your University"
+  major: "Computer Science / Software Engineering / Artificial Intelligence"
   email: "2625909625@qq.com"
   github: "https://github.com/vn416613"
-  githubLabel: "vn416613"
+  githubLabel: "github.com/vn416613"
   location: "China"
-  avatarText: "在学"
-  welcome: "Welcome! Feel free to reach out via email or GitHub."
-  bio: "研一在读，关注 LLM Agent、工具调用、上下文管理与本地开发自动化。能够阅读并拆解中型 Python 工程，理解从 CLI 到 Runtime、模型适配、工具安全执行、运行审计和 benchmark 评测的完整链路。"
+  avatar: "/images/avatar.svg"
+  welcome: "Building practical AI agent systems with clean runtime design."
+  bio: "First-year master's student focused on LLM agents, tool execution, context management, and developer automation. I can read and explain medium-sized Python systems from CLI entrypoints to runtime loops, model adapters, tool safety, trace artifacts, and benchmark evaluation."
   resumeUrl: "/resume/"
 
-stats:
-  - value: "1"
-    label: "Core Project"
-  - value: "4"
-    label: "Model Backends"
-  - value: "96"
-    label: "Tests Passed"
-  - value: "5"
-    label: "Skill Groups"
-  - value: "2"
-    label: "Blog Notes"
-  - value: "∞"
-    label: "Learning"
+quickFacts:
+  - label: "Focus"
+    value: "LLM Agent Runtime"
+  - label: "Language"
+    value: "Python"
+  - label: "Goal"
+    value: "AI / Backend Intern"
 
-recentUpdates:
-  - "Pico 本地 AI Coding Agent"
-  - "Agent Runtime 主循环"
-  - "ContextManager 上下文管理"
-  - "Tool Safety & Trace Report"
-
-hotTags:
-  - "Python"
-  - "LLM Agent"
-  - "CLI"
-  - "pytest"
-  - "Prompt"
-  - "GitHub Pages"
+focusTags:
+  - "Agent Runtime"
+  - "Tool Calling"
+  - "Context Memory"
+  - "Python Backend"
 
 interests:
-  - "AI Agent Runtime"
-  - "LLM 工具调用"
-  - "上下文压缩与记忆"
-  - "Python 后端工程"
-  - "开发工具自动化"
+  - "AI agent runtime design"
+  - "Controlled tool execution"
+  - "Prompt context compression"
+  - "Traceable developer automation"
 
 education:
-  - degree: "硕士研究生 · 研一在读"
-    institution: "XXX大学"
-    major: "计算机科学与技术 / 软件工程 / 人工智能"
+  - degree: "Master's Student"
+    institution: "Your University"
+    major: "Computer Science / Software Engineering / Artificial Intelligence"
     period: "2025.09 - 2028.06"
-    description: "关注大语言模型应用、AI Agent、软件工程自动化与后端工具链。当前重点学习 Python 工程开发、LLM 工具调用、Prompt 上下文管理、pytest 测试与 GitHub Pages 项目展示。"
+    description: "Coursework and self-directed projects focus on AI applications, software engineering automation, Python systems, LLM tool use, prompt context management, pytest-based testing, and GitHub Pages portfolio delivery."
 
 projects:
-  - name: "Pico 本地 AI Coding Agent"
+  - name: "RepoPilot Agent Runtime"
     period: "2026.04 - 2026.06"
-    role: "源码分析 / 二次开发准备 / 简历项目"
-    description: "基于 Python 构建的本地 AI 编程助手 Agent，支持在代码仓库中读取文件、搜索代码、执行命令、修改文件、保存会话状态，并通过受控工具调用协议连接 OpenAI-compatible、Anthropic-compatible、DeepSeek、Ollama 等模型后端。"
+    role: "Source Code Analysis / Agent Runtime Project"
+    description: "A lightweight local coding-agent runtime built in Python. It supports repository inspection, file reading, code search, shell execution, patch-based editing, session persistence, and multi-provider model access through a controlled tool protocol."
     url: "https://github.com/vn416613/vn416613.github.io"
-    tags: ["Python", "LLM Agent", "CLI", "pytest"]
+    tags: ["Python", "LLM Agent", "Runtime", "CLI", "pytest"]
     bullets:
-      - "梳理 cli.py -> runtime.py -> context_manager.py -> tools.py -> models.py 的执行链路，理解 Pico.ask() 中 prompt 构建、模型调用、输出解析、工具执行与最终答案返回。"
-      - "分析 <tool>/<final> 协议、工具白名单、参数校验、重复调用拦截与审批策略，理解如何安全落地文件读取、代码搜索、shell 执行和 patch 修改。"
-      - "掌握 prefix、memory、relevant_memory、history、current_request 分段构建 prompt 的方式，以及历史压缩、文件摘要复用、工作记忆和 checkpoint 恢复机制。"
-      - "分析 task_state.json、trace.jsonl、report.json 的落盘逻辑，理解 benchmark 和 metrics 如何评估 Agent 稳定性。"
-  - name: "Hugo 简历博客"
+      - "Mapped the end-to-end runtime path from cli.py to runtime.py, context_manager.py, tools.py, and models.py, explaining how a user request becomes prompt construction, model completion, tool execution, and final response generation."
+      - "Studied the <tool>/<final> protocol, tool registry, argument validation, repeated-call guard, approval policy, path boundary checks, and sensitive environment-variable redaction used to make model-driven actions auditable."
+      - "Explained the context pipeline that divides prompts into prefix, memory, relevant_memory, history, and current_request sections, then compresses older context while preserving the latest user request."
+      - "Analyzed task_state.json, trace.jsonl, report.json, checkpoints, benchmark fixtures, and metrics utilities to understand how the system evaluates safety, recovery, memory, and context behavior."
+    outcomes:
+      - "4 model backend families"
+      - "Traceable run artifacts"
+      - "Context and memory recovery"
+  - name: "Hugo Resume Portfolio"
     period: "2026.06"
-    role: "个人展示站 / GitHub Pages"
-    description: "基于 Hugo + PaperMod 构建个人简历博客，集中展示教育背景、AI Agent 项目、专业技能和学习笔记，并通过 GitHub Pages 自动部署。"
+    role: "Personal Portfolio / GitHub Pages"
+    description: "A Hugo + PaperMod based resume portfolio for internship applications. It presents education, agent engineering projects, technical skills, and learning notes through a responsive personal website."
     url: "https://vn416613.github.io/"
-    tags: ["Hugo", "PaperMod", "GitHub Pages"]
+    tags: ["Hugo", "PaperMod", "GitHub Pages", "Responsive UI"]
     bullets:
-      - "使用 PaperMod 主题搭建博客式简历主页，结合数据文件维护个人信息、项目和技能内容。"
-      - "设计左侧个人信息栏、项目卡片、技能标签和博客入口，提升实习投递时的展示效果。"
+      - "Customized PaperMod layouts and extended CSS to create a compact profile sidebar, project cards, skill sections, and blog-style learning notes."
+      - "Configured GitHub Pages deployment and root-level static output so the portfolio renders as a website instead of a README page."
+    outcomes:
+      - "Responsive layout"
+      - "Portfolio-ready content"
 
 skills:
-  - group: "Agent 框架与 LLM 工程"
-    items: ["AI Agent 主循环", "工具调用协议", "Prompt 构建", "上下文压缩", "工作记忆", "运行审计"]
-  - group: "Python 工程开发"
+  - group: "Agent Engineering"
+    items: ["Agent runtime loop", "Tool protocol", "Prompt assembly", "Context compression", "Working memory", "Run audit"]
+  - group: "Python Systems"
     items: ["argparse", "urllib", "subprocess", "pathlib", "json/jsonl", "pytest"]
-  - group: "模型 API 接入"
-    items: ["OpenAI-compatible API", "Anthropic-compatible API", "DeepSeek", "Ollama", "complete() 封装"]
-  - group: "后端与工具链基础"
-    items: ["Git", "CLI 工具", "HTTP 请求", "环境变量管理", "日志审计", "跨平台调试"]
-  - group: "前端展示与部署"
-    items: ["Hugo", "PaperMod", "响应式布局", "GitHub Pages", "GitHub Actions"]
+  - group: "Model Integration"
+    items: ["OpenAI-compatible API", "Anthropic-compatible API", "DeepSeek", "Ollama", "Unified complete() adapter"]
+  - group: "Backend Foundations"
+    items: ["Git", "CLI tools", "HTTP requests", "Environment management", "Logging", "Cross-platform debugging"]
+  - group: "Portfolio Delivery"
+    items: ["Hugo", "PaperMod", "Responsive layout", "GitHub Pages", "GitHub Actions"]
 
 notes:
-  - "Pico 项目未依赖 LangChain、LangGraph、FastAPI 或 MCP，而是基于 Python 自研轻量级 Agent Runtime。"
-  - "后续可继续新增 FastAPI 服务层、Git 工具扩展、Windows 兼容修复或更多博客笔记。"
+  - "The agent runtime project does not rely on LangChain, LangGraph, FastAPI, or MCP. It is a lightweight Python implementation focused on runtime mechanics."
+  - "Potential next improvements include a FastAPI service layer, Git-oriented tools, Windows compatibility fixes, and deeper benchmark reports."

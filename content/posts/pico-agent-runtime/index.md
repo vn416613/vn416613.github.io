@@ -1,11 +1,11 @@
 ---
-title: "Pico Agent Runtime 源码阅读笔记"
+title: "RepoPilot Agent Runtime Reading Notes"
 date: 2026-06-09
-summary: "从 CLI 入口到 Pico.ask() 主循环，梳理一个轻量级 Coding Agent 的运行机制。"
+summary: "A concise walkthrough of a lightweight coding-agent runtime from CLI entrypoint to the ask loop."
 tags: ["Python", "LLM Agent", "Runtime"]
 ---
 
-Pico 的核心链路可以概括为：
+The core runtime path can be summarized as:
 
 ```text
 cli.py -> build_agent -> Pico.ask()
@@ -16,10 +16,10 @@ cli.py -> build_agent -> Pico.ask()
 -> trace / memory / checkpoint / report
 ```
 
-这个项目适合作为理解 Agent Runtime 底层机制的练习项目，因为它没有依赖 LangChain、LangGraph 或 MCP，而是直接用 Python 标准库实现模型调用、工具协议、上下文管理和运行审计。
+This project is a good exercise for understanding agent runtime mechanics because it does not depend on LangChain, LangGraph, FastAPI, or MCP. It uses Python standard-library building blocks to implement model calls, tool protocols, context management, and run auditing.
 
-阅读这个项目时，我重点关注三个问题：
+While reading the code, I focused on three questions:
 
-1. 模型输出如何被限制成可执行动作。
-2. 工具执行前后如何做安全校验和审计记录。
-3. 多轮任务如何通过 history、memory 和 checkpoint 保持连续性。
+1. How model output is constrained into executable actions.
+2. How tool execution is validated, audited, and bounded.
+3. How multi-step work keeps continuity through history, memory, and checkpoints.

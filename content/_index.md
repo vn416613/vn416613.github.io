@@ -1,5 +1,5 @@
 ---
 title: "BIO"
 layout: "resume-home"
-description: "个人简历博客首页"
+description: "Personal resume portfolio homepage"
 ---

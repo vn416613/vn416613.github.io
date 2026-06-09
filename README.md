@@ -1,30 +1,30 @@
 # AI Agent Resume Blog
 
-这是一个用于个人简历展示的 Hugo + PaperMod 静态博客，内容围绕 Pico 本地 AI Coding Agent 项目、专业技能和学习笔记组织。
+This is a Hugo + PaperMod static portfolio site for internship applications. It highlights an AI agent runtime project, technical skills, education, and learning notes.
 
-## 本地运行
+## Local Development
 
 ```powershell
 D:\tools\hugo\hugo.exe server -s D:\resume-hugo --disableFastRender
 ```
 
-## 本地构建
+## Local Build
 
 ```powershell
 D:\tools\hugo\hugo.exe -s D:\resume-hugo --minify
 ```
 
-## 修改个人信息
+## Editing Profile Content
 
-主要内容集中在 `data/resume.yaml`：
+Most profile content lives in `data/resume.yaml`:
 
-- `profile`：姓名、邮箱、GitHub、求职方向
-- `education`：教育经历
-- `projects`：项目经历
-- `skills`：技能标签
+- `profile`: name, email, GitHub, internship direction
+- `education`: education experience
+- `projects`: project experience
+- `skills`: skill tags
 
-博客文章放在 `content/posts/`。
+Blog notes live in `content/posts/`.
 
-## 发布
+## Deployment
 
-仓库推送到 `vn416613.github.io` 后，GitHub Actions 会自动构建并部署到 GitHub Pages。
+After pushing to `vn416613.github.io`, GitHub Actions can build and deploy the site to GitHub Pages. The repository also keeps a root-level static build for branch-based Pages deployment.

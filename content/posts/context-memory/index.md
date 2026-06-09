@@ -1,11 +1,11 @@
 ---
-title: "上下文管理与工作记忆学习记录"
+title: "Context Management and Working Memory Notes"
 date: 2026-06-09
-summary: "记录 ContextManager 如何把 prefix、memory、history 和当前请求压缩进 prompt。"
+summary: "Notes on how the context manager compresses prefix, memory, history, and the current request into a usable prompt."
 tags: ["Prompt", "Memory", "Context"]
 ---
 
-Pico 的 ContextManager 会将 prompt 拆分为：
+The context manager divides each prompt into several sections:
 
 - `prefix`
 - `memory`
@@ -13,6 +13,6 @@ Pico 的 ContextManager 会将 prompt 拆分为：
 - `history`
 - `current_request`
 
-其中当前用户请求不会被裁剪，旧历史会被压缩，重复读文件记录会复用文件摘要。这种设计可以帮助 Agent 在长对话和多步任务中保持稳定。
+The latest user request is preserved, older history can be compressed, and repeated file reads can reuse file summaries. This design helps an agent remain stable during long conversations and multi-step tasks.
 
-这部分给我的启发是：Agent 的效果不只取决于模型能力，也取决于运行时如何组织上下文。合理的上下文预算、旧信息压缩和最新请求保护，往往比单纯堆长 prompt 更可靠。
+The key takeaway is that agent quality does not only depend on the model. It also depends on how the runtime organizes context. A careful budget strategy, old-context compression, and current-request protection can be more reliable than simply sending a longer prompt.
