@@ -4,8 +4,8 @@ profile:
   school: "XXX大学 · 计算机科学与技术 / 软件工程 / 人工智能"
   location: "China"
   email: "2625909625@qq.com"
-  github: "https://github.com/your-github-username"
-  githubLabel: "your-github-username"
+  github: "https://github.com/vn416613"
+  githubLabel: "vn416613"
   intent: "求职方向：AI 应用开发实习 / 后端开发实习 / LLM Agent 工程实习"
   summary: "关注 LLM Agent、工具调用、上下文管理与本地开发自动化。能够阅读并拆解中型 Python 工程，理解从 CLI 到 Runtime、模型适配、工具安全执行、运行审计和 benchmark 评测的完整链路。"
 

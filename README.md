@@ -25,4 +25,4 @@ D:\tools\hugo\hugo.exe -s D:\resume-hugo --minify
 
 ## 发布
 
-仓库推送到 `your-github-username.github.io` 后，GitHub Actions 会自动构建并部署到 GitHub Pages。
+仓库推送到 `vn416613.github.io` 后，GitHub Actions 会自动构建并部署到 GitHub Pages。

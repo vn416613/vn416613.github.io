@@ -1,4 +1,4 @@
-baseURL = "https://your-github-username.github.io/"
+baseURL = "https://vn416613.github.io/"
 locale = "zh-cn"
 title = "AI Agent Resume"
 disableKinds = ["taxonomy", "term", "RSS"]
