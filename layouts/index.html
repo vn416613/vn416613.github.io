@@ -10,14 +10,22 @@
       <p class="profile-title">{{ $r.profile.subtitle }}</p>
       <p class="profile-welcome">{{ $r.profile.welcome }}</p>
 
+      <div class="profile-details" aria-label="Profile details">
+        <div>
+          <span>School</span>
+          <strong>{{ $r.profile.school }}</strong>
+        </div>
+        <div>
+          <span>Email</span>
+          <a href="mailto:{{ $r.profile.email }}">{{ $r.profile.email }}</a>
+        </div>
+      </div>
+
       <div class="contact-row" aria-label="Contact links">
         <a href="mailto:{{ $r.profile.email }}" title="Email">Email</a>
         <a href="{{ $r.profile.github }}" target="_blank" rel="noreferrer" title="GitHub">GitHub</a>
       </div>
 
-      <div class="focus-tags">
-        {{ range $r.focusTags }}<span>{{ . }}</span>{{ end }}
-      </div>
     </div>
   </aside>
 
