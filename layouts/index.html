@@ -1,0 +1,109 @@
+{{ define "main" }}
+{{ $r := hugo.Data.resume }}
+<main class="resume-shell">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">AI Agent Resume</p>
+      <h1>{{ $r.profile.name }}</h1>
+      <p class="headline">{{ $r.profile.headline }}</p>
+      <p class="summary">{{ $r.profile.summary }}</p>
+      <div class="hero-actions">
+        <a href="mailto:{{ $r.profile.email }}">联系邮箱</a>
+        <a href="{{ $r.profile.github }}" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+    <aside class="profile-panel" aria-label="profile">
+      <div class="avatar">{{ substr $r.profile.name 0 1 }}</div>
+      <dl>
+        <div><dt>学校</dt><dd>{{ $r.profile.school }}</dd></div>
+        <div><dt>方向</dt><dd>{{ $r.profile.intent }}</dd></div>
+        <div><dt>邮箱</dt><dd>{{ $r.profile.email }}</dd></div>
+        <div><dt>GitHub</dt><dd>{{ $r.profile.githubLabel }}</dd></div>
+      </dl>
+    </aside>
+  </section>
+
+  <section class="stat-grid" aria-label="highlights">
+    {{ range $r.highlights }}
+      <article>
+        <strong>{{ .value }}</strong>
+        <span>{{ .label }}</span>
+      </article>
+    {{ end }}
+  </section>
+
+  <section class="section-block" id="education">
+    <div class="section-heading">
+      <h2>教育经历</h2>
+      <span>{{ $r.education.period }}</span>
+    </div>
+    <div class="education-line">
+      <div>
+        <h3>{{ $r.education.school }}</h3>
+        <p>{{ $r.education.major }}</p>
+      </div>
+      <strong>{{ $r.education.degree }}</strong>
+    </div>
+    <div class="chips">
+      {{ range $r.education.courses }}<span>{{ . }}</span>{{ end }}
+    </div>
+  </section>
+
+  <section class="section-block" id="projects">
+    <div class="section-heading">
+      <h2>核心项目</h2>
+      <span>Project Experience</span>
+    </div>
+    {{ range $r.projects }}
+      <article class="project-card">
+        <div class="project-top">
+          <div>
+            <h3>{{ .name }}</h3>
+            <p>{{ .role }}</p>
+          </div>
+          <time>{{ .period }}</time>
+        </div>
+        <p class="project-intro">{{ .intro }}</p>
+        <div class="chips">
+          {{ range .tags }}<span>{{ . }}</span>{{ end }}
+        </div>
+        <ol class="project-points">
+          {{ range .bullets }}
+            <li><strong>{{ .title }}：</strong>{{ .text }}</li>
+          {{ end }}
+        </ol>
+        <div class="metric-row">
+          {{ range .metrics }}<span>{{ . }}</span>{{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </section>
+
+  <section class="section-block" id="skills">
+    <div class="section-heading">
+      <h2>专业技能</h2>
+      <span>Skills</span>
+    </div>
+    <div class="skills-grid">
+      {{ range $r.skills }}
+        <article>
+          <h3>{{ .group }}</h3>
+          <div class="chips">
+            {{ range .items }}<span>{{ . }}</span>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="section-block notes" id="notes">
+    <div class="section-heading">
+      <h2>项目说明</h2>
+      <span>Notes</span>
+    </div>
+    <ul>
+      {{ range $r.notes }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </section>
+</main>
+{{ end }}

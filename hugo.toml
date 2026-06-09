@@ -1,0 +1,12 @@
+baseURL = "https://your-github-username.github.io/"
+locale = "zh-cn"
+title = "AI Agent Resume"
+disableKinds = ["taxonomy", "term", "RSS"]
+enableRobotsTXT = true
+
+[params]
+  description = "研一学生的 AI Agent / 后端开发实习简历展示页"
+  author = "你的姓名"
+
+[markup.goldmark.renderer]
+  unsafe = true

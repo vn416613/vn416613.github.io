@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.Params.description }}">
+  <title>{{ site.Title }}</title>
+  {{ $style := resources.Get "css/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="{{ "/" | relURL }}">AI Agent Resume</a>
+    <nav>
+      <a href="#education">教育</a>
+      <a href="#projects">项目</a>
+      <a href="#skills">技能</a>
+    </nav>
+  </header>
+  {{ block "main" . }}{{ end }}
+  <footer class="site-footer">
+    <span>Built with Hugo for GitHub Pages.</span>
+  </footer>
+</body>
+</html>
