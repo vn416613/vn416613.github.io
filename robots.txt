@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://vn416613.github.io/sitemap.xml

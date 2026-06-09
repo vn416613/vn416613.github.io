@@ -1,0 +1,346 @@
+:root {
+  --resume-border: var(--border);
+  --resume-soft: rgba(127, 127, 127, 0.08);
+}
+
+.main {
+  max-width: none;
+  padding: 0;
+}
+
+.portfolio-shell {
+  display: grid;
+  grid-template-columns: 368px minmax(0, 1fr);
+  min-height: calc(100vh - var(--header-height));
+  border-top: 1px solid var(--resume-border);
+}
+
+.portfolio-sidebar {
+  position: sticky;
+  top: var(--header-height);
+  align-self: start;
+  height: calc(100vh - var(--header-height));
+  padding: 28px 16px;
+  border-right: 1px solid var(--resume-border);
+  overflow: auto;
+}
+
+.profile-avatar {
+  display: grid;
+  place-items: center;
+  width: 168px;
+  height: 168px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, .85), transparent 28%),
+    linear-gradient(145deg, #f4d1d8, #d9475f 58%, #8a2030);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .14);
+}
+
+.portfolio-sidebar h1,
+.profile-name,
+.profile-title,
+.profile-school {
+  text-align: center;
+}
+
+.portfolio-sidebar h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.profile-name {
+  margin: 4px 0 8px;
+  font-weight: 700;
+}
+
+.profile-title,
+.profile-school {
+  margin: 0 0 6px;
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.profile-welcome {
+  margin: 16px 0 18px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: var(--resume-soft);
+  color: var(--secondary);
+  text-align: center;
+  font-size: 13px;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.contact-row a,
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 7px;
+  background: var(--primary);
+  color: var(--theme);
+  font-weight: 700;
+}
+
+.sidebar-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar-stats div {
+  text-align: center;
+}
+
+.sidebar-stats strong {
+  display: block;
+  font-size: 25px;
+}
+
+.sidebar-stats span {
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+.sidebar-list,
+.sidebar-tags {
+  margin-top: 20px;
+}
+
+.sidebar-list h2,
+.sidebar-tags h2 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.sidebar-list a {
+  display: block;
+  margin-bottom: 7px;
+  padding: 7px 10px;
+  border: 1px solid var(--resume-border);
+  border-radius: 8px;
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+.sidebar-tags div,
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sidebar-tags span,
+.tag-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: var(--resume-soft);
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+.portfolio-main {
+  padding: 42px 30px 56px 38px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  gap: 34px 70px;
+  margin-bottom: 34px;
+}
+
+.about-copy {
+  grid-column: 1 / -1;
+}
+
+.about-copy h2 {
+  margin-bottom: 12px;
+  font-size: 36px;
+}
+
+.about-copy p {
+  max-width: 900px;
+}
+
+.download-btn {
+  margin-top: 10px;
+}
+
+.interest-block h2,
+.education-block h2,
+.home-section h2 {
+  font-size: 24px;
+}
+
+.interest-block li {
+  margin-bottom: 10px;
+}
+
+.education-block article {
+  margin-bottom: 22px;
+}
+
+.education-block h3 {
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+
+.education-block p,
+.education-block small {
+  color: var(--secondary);
+}
+
+.home-section {
+  margin-top: 26px;
+}
+
+.section-title-row,
+.project-detail-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.section-title-row a,
+.project-detail-head span {
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-card,
+.project-detail-card,
+.skill-card,
+.note-panel {
+  position: relative;
+  padding: 24px;
+  border: 1px solid var(--resume-border);
+  border-radius: 8px;
+  background: var(--entry);
+}
+
+.project-card h3 {
+  max-width: 85%;
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.project-card p,
+.project-detail-card p {
+  color: var(--secondary);
+}
+
+.card-link {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: var(--tertiary);
+  font-size: 22px;
+}
+
+.skill-preview-grid,
+.skill-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skill-preview-grid article {
+  padding: 20px;
+  border: 1px solid var(--resume-border);
+  border-radius: 8px;
+}
+
+.portfolio-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 34px 24px 56px;
+}
+
+.project-list {
+  display: grid;
+  gap: 18px;
+}
+
+.project-detail-head h2 {
+  margin-bottom: 4px;
+}
+
+.project-detail-card ul,
+.note-panel ul {
+  margin-top: 18px;
+}
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.timeline section {
+  padding-left: 20px;
+  border-left: 3px solid var(--primary);
+}
+
+.timeline span {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+@media (max-width: 1180px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .portfolio-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-sidebar {
+    position: static;
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--resume-border);
+  }
+
+  .portfolio-main {
+    padding: 28px 18px 42px;
+  }
+
+  .about-grid,
+  .project-grid,
+  .skill-preview-grid,
+  .skill-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-copy h2 {
+    font-size: 32px;
+  }
+}

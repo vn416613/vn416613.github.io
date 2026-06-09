@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $r := hugo.Data.resume }}
+<article class="post-single portfolio-page">
+  <header class="page-header">
+    <h1>Skills</h1>
+    <p>实习投递重点展示的 Agent 工程、Python 后端和部署能力。</p>
+  </header>
+  <div class="skill-page-grid">
+    {{ range $r.skills }}
+      <section class="skill-card">
+        <h2>{{ .group }}</h2>
+        <div class="tag-row">
+          {{ range .items }}<span>{{ . }}</span>{{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+  <section class="note-panel">
+    <h2>Notes</h2>
+    <ul>
+      {{ range $r.notes }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </section>
+</article>
+{{ end }}

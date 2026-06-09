@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LLM Agent on vn416613</title>
+    <link>https://vn416613.github.io/tags/llm-agent/</link>
+    <description>Recent content in LLM Agent on vn416613</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vn416613.github.io/tags/llm-agent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pico Agent Runtime 源码阅读笔记</title>
+      <link>https://vn416613.github.io/posts/pico-agent-runtime/</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://vn416613.github.io/posts/pico-agent-runtime/</guid>
+      <description>从 CLI 入口到 Pico.ask() 主循环，梳理一个轻量级 Coding Agent 的运行机制。</description>
+    </item>
+  </channel>
+</rss>

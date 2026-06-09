@@ -1,12 +1,83 @@
 baseURL = "https://vn416613.github.io/"
 locale = "zh-cn"
-title = "AI Agent Resume"
-disableKinds = ["taxonomy", "term", "RSS"]
+defaultContentLanguage = "zh"
+title = "vn416613"
+theme = "hugo-PaperMod"
 enableRobotsTXT = true
+enableEmoji = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[pagination]
+  pagerSize = 6
 
 [params]
-  description = "研一学生的 AI Agent / 后端开发实习简历展示页"
+  env = "production"
+  title = "vn416613"
+  description = "研一学生的 AI Agent / 后端开发实习简历博客"
   author = "你的姓名"
+  defaultTheme = "light"
+  disableThemeToggle = false
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  mainSections = ["posts"]
+
+  [params.assets]
+    disableHLJS = true
+
+  [params.label]
+    text = "vn416613"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/vn416613"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:2625909625@qq.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "bio"
+    name = "BIO"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "projects"
+    name = "PROJECTS"
+    url = "/projects/"
+    weight = 2
+  [[menu.main]]
+    identifier = "skills"
+    name = "SKILLS"
+    url = "/skills/"
+    weight = 3
+  [[menu.main]]
+    identifier = "experience"
+    name = "EXPERIENCE"
+    url = "/experience/"
+    weight = 4
+  [[menu.main]]
+    identifier = "blog"
+    name = "BLOG"
+    url = "/posts/"
+    weight = 5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup.highlight]
+  noClasses = false

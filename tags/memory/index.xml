@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memory on vn416613</title>
+    <link>https://vn416613.github.io/tags/memory/</link>
+    <description>Recent content in Memory on vn416613</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 09 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vn416613.github.io/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>上下文管理与工作记忆学习记录</title>
+      <link>https://vn416613.github.io/posts/context-memory/</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://vn416613.github.io/posts/context-memory/</guid>
+      <description>记录 ContextManager 如何把 prefix、memory、history 和当前请求压缩进 prompt。</description>
+    </item>
+  </channel>
+</rss>

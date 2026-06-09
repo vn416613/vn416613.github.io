@@ -1,6 +1,6 @@
-# AI Agent Resume Site
+# AI Agent Resume Blog
 
-这是一个用于个人简历展示的 Hugo 静态站点。
+这是一个用于个人简历展示的 Hugo + PaperMod 静态博客，内容围绕 Pico 本地 AI Coding Agent 项目、专业技能和学习笔记组织。
 
 ## 本地运行
 
@@ -22,6 +22,8 @@ D:\tools\hugo\hugo.exe -s D:\resume-hugo --minify
 - `education`：教育经历
 - `projects`：项目经历
 - `skills`：技能标签
+
+博客文章放在 `content/posts/`。
 
 ## 发布
 
